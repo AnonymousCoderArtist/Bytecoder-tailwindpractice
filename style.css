@@ -35,7 +35,7 @@ body[theme="cyan"] .section {
     color: var(--dcyan);
 }
 body[theme="cyan"] nav{
-    background-color: var(--cyan);
+    /* background-color: var(--cyan); */
     color: var(--dcyan);
 }
 
@@ -46,7 +46,7 @@ body[theme="salmon"] .section {
     color: var(--dsalmon);
 }
 body[theme="salmon"] nav{
-    background-color: var(--selection-salmon);
+    /* background-color: var(--selection-salmon); */
     color: var(--dsalmon);
 }
 
@@ -57,8 +57,12 @@ body[theme="white"] .section {
     color: var(--black);
 }
 body[theme="white"] nav{
-    background-color: var(--white);
+    /* background-color: var(--white); */
     color: var(--black);
+}
+
+nav{
+    background-color: rgba(79, 79, 79, 0.141);
 }
 
 .vdodiv {

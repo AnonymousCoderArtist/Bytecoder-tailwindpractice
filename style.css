@@ -1,0 +1,86 @@
+:root{
+    --selection-salmon: #ef9d71;
+    --dsalmon: #571f19;
+    --black: #000;
+    --white: #fff;
+    --cyan: #aedee0;
+    --dcyan: #1f2f32;
+    --salmon: #fa8072;
+}
+
+*::selection{
+    background-color: var(--selection-salmon);
+}
+
+body{
+    transition: background-color cubic-bezier(0.175, 0.885, 0.32, 1.275) .7s;
+}
+
+body[theme="black"] {
+    background-color: var(--black);
+}
+
+body[theme="black"] nav{
+    color: var(--white);
+}
+
+body[theme="black"] .section {
+    color: var(--white);
+}
+
+body[theme="cyan"] {
+    background-color: var(--cyan);
+}
+body[theme="cyan"] .section {
+    color: var(--dcyan);
+}
+body[theme="cyan"] nav{
+    background-color: var(--cyan);
+    color: var(--dcyan);
+}
+
+body[theme="salmon"] {
+    background-color: var(--selection-salmon);
+}
+body[theme="salmon"] .section {
+    color: var(--dsalmon);
+}
+body[theme="salmon"] nav{
+    background-color: var(--selection-salmon);
+    color: var(--dsalmon);
+}
+
+body[theme="white"] {
+    background-color: var(--white);
+}
+body[theme="white"] .section {
+    color: var(--black);
+}
+body[theme="white"] nav{
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.vdodiv {
+    clip-path: circle(var(--clip) at 50% 50%);
+}
+
+.parallax-image { will-change: transform; }
+.footer__logo--char {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(100%);
+}
+.footer__logo--char.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 0.6s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.navbar-hide {
+    transform: translateY(-100%);
+    transition: transform 0.4s ease-in-out;
+}
+.navbar-show {
+    transform: translateY(0);
+    transition: transform 0.4s ease-in-out;
+}
